@@ -1,0 +1,725 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Lab Demos</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="310d4633-0f88-8075-9096-cfda63efcc8c" class="page sans"><header><img class="page-cover-image" src="Screenshot_2026-02-23_201039.png" style="object-position:center 50%"/><h1 class="page-title" dir="auto">Lab Demos</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="310d4633-0f88-80cc-bcba-d8fb859d1221" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="310d4633-0f88-8078-b1c0-d55a090c5279" class="">Tello drone AprilTag tracking:</h2></div><div style="display:contents" dir="auto"><hr id="310d4633-0f88-80a4-8d24-f552dd894ef3"/></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80f6-911d-d149e88c80dd" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="311d4633-0f88-80a6-af4d-fd8061138bfd"/></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-808c-89c1-c2138af8f373" class=""><strong>Objective</strong></p></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-801f-b941-c4835203fed9" class="">This lab demo demonstrates <strong>vision-based closed-loop control</strong> using a <strong>DJI Tello drone</strong>.</p></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-8095-b7a1-ebe2c9434644" class="">The drone detects an <strong>AprilTag (tag36h11 family)</strong> and autonomously follows it:</p></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-80c9-adec-cd33816c48c3" class="bulleted-list"><li style="list-style-type:disc">Rotates (yaw control) to center the tag</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-801c-a838-ccfb7d68f2bd" class="bulleted-list"><li style="list-style-type:disc">Moves forward to maintain a desired distance</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-8021-8ed5-e093096d4b1e" class="bulleted-list"><li style="list-style-type:disc">Stops when it reaches the target distance</li></ul></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-803f-9bff-f81174e085f9" class="">This experiment showcases <strong>real-time perception → control loop integration</strong>.</p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80ca-a9ca-f3928da9583c" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="310d4633-0f88-8067-990b-c464e5a96d3e"/></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-80e5-ba98-f96bc115d012" class=""><strong>Hardware &amp; Software Setup</strong></p></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-8031-8045-e0e2c63ec0d3" class="">Hardware</p></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-80f5-8d75-f7d011927815" class="bulleted-list"><li style="list-style-type:disc"><strong>DJI Tello</strong> drone</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-8024-b761-defafd08161a" class="bulleted-list"><li style="list-style-type:disc">Printed AprilTag (tag36h11)</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-80c5-90c5-c7ef66ded906" class="bulleted-list"><li style="list-style-type:disc">Laptop for programming (WiFi communication)</li></ul></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-80a4-88c1-dba94d733aaa" class="">Software</p></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-80fe-90fc-e89cde4f43df" class="bulleted-list"><li style="list-style-type:disc">Python 3.10</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-80c0-8f9d-f87eaa420e84" class="bulleted-list"><li style="list-style-type:disc"><code>djitellopy</code> (Tello SDK wrapper)</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-8033-98e6-dc13614d0502" class="bulleted-list"><li style="list-style-type:disc">OpenCV (<code>cv2</code>)</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-8024-b5e9-e28995f73c55" class="bulleted-list"><li style="list-style-type:disc"><code>pupil_apriltags</code> detector</li></ul></div><div style="display:contents" dir="auto"><ul id="310d4633-0f88-80a2-b40e-d414a74ae13e" class="bulleted-list"><li style="list-style-type:disc">NumPy</li></ul></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80f4-bb5d-da291533d672" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="310d4633-0f88-80c9-bec5-e28f9d121e48"/></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-8089-b2d6-e8653e826b31" class="">
+</p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-8098-b645-ecc0650b2f68" class=""><strong>Demo instructions</strong></p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80f5-839f-efb6ef6ca48a" class="">Code: <a href="https://github.com/imsafwan/April_tag_follow">https://github.com/imsafwan/April_tag_follow</a></p></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-804d-829b-d61d523e8668" class="bulleted-list"><li style="list-style-type:disc">Disable the firewall on the host computer.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-80cb-a492-d1f948cfcdc2" class="bulleted-list"><li style="list-style-type:disc">Run the <code>apriltag_track.py</code> script.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-80be-ad5d-cffef82d382e" class="bulleted-list"><li style="list-style-type:disc">The script will start communicating with the drone, make it take off, start the camera, and begin image processing for tracking.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-8024-8939-c8938b155a7e" class="bulleted-list"><li style="list-style-type:disc">Keep <code>emergency.py</code> ready in case you need to immediately stop the drone.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-8097-8fbd-d50a3978c35e" class="bulleted-list"><li style="list-style-type:disc">Once you&#x27;re done, turn the firewall back on for the host computer.</li></ul></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80b1-9649-d5f4e789904a" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="311d4633-0f88-80d6-bc5a-d3b242a2a1b4"/></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-803c-ac93-cbdaf40c1611" class="">
+</p></div><div style="display:contents" dir="auto"><p id="310d4633-0f88-8077-94f0-e9c5e12a076c" class=""><strong>Code Logical flow:</strong></p></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-8055-a12c-ed22811110ad" class="bulleted-list"><li style="list-style-type:disc">Imports required libraries: <code>djitellopy</code> for controlling the <strong>DJI Tello</strong>, <code>cv2</code> for image processing, <code>numpy</code> for numerical operations, and <code>pupil_apriltags</code> for AprilTag detection.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-803f-af2d-eea130b39871" class="bulleted-list"><li style="list-style-type:disc">Defines frame size, PID gains for yaw and forward motion, and initializes previous error terms for closed-loop control.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-8006-9591-ccc051ede8eb" class="bulleted-list"><li style="list-style-type:disc">Sets camera intrinsic matrix and distortion coefficients for pose estimation using <code>solvePnP()</code>.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-808a-b610-dbecec86abc0" class="bulleted-list"><li style="list-style-type:disc">Initializes the Tello drone, connects via WiFi, resets velocities, and starts video streaming.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-80b5-9d77-f50aa758d21c" class="bulleted-list"><li style="list-style-type:disc">Continuously captures frames from the drone camera and resizes them.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-802d-ba85-fe95335c3cc2" class="bulleted-list"><li style="list-style-type:disc">Detects AprilTags in the grayscale image and draws bounding boxes around detected tags.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-80c7-806d-ff789674143c" class="bulleted-list"><li style="list-style-type:disc">Estimates the tag pose using known tag size and camera calibration to obtain translation (distance).</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-80f2-8377-e41f9c4f867c" class="bulleted-list"><li style="list-style-type:disc">Computes horizontal (yaw) error from image center and distance error from desired stopping distance (0.5 m).</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-8051-b3b0-ca7699ae978a" class="bulleted-list"><li style="list-style-type:disc">Applies PID control to calculate yaw velocity and forward velocity.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-8067-a98f-ebb50390e60d" class="bulleted-list"><li style="list-style-type:disc">Sends RC control commands to the drone for real-time closed-loop tracking.</li></ul></div><div style="display:contents" dir="auto"><ul id="311d4633-0f88-8077-9646-eed337fa1ed7" class="bulleted-list"><li style="list-style-type:disc">Stops and lands safely when the user presses the ‘q’ key.</li></ul></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-8010-a309-dc058a259b64" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="311d4633-0f88-8010-8c1f-cb6d8b71127f"/></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-8092-8640-c05cb1a522af" class="">
+</p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80fa-acea-f62163f43a1a" class=""><strong>Codes &amp; Resources</strong></p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-802d-885e-ccb249be3f6d" class="">Github: <mark class="highlight-blue"><a href="https://github.com/imsafwan/April_tag_follow">https://github.com/imsafwan/April_tag_follow</a></mark></p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80a5-97e3-cb18b600119a" class="">Video <mark class="highlight-blue"><a href="https://www.youtube.com/watch?v=fKat43Ljl54">https://www.youtube.com/watch?v=fKat43Ljl54</a></mark></p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-8013-b03a-e6d3604c6cb4" class="">Apriltag generation: <mark class="highlight-blue"><a href="https://chaitanyantr.github.io/apriltag.html">https://chaitanyantr.github.io/apriltag.html</a></mark></p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80c1-bc62-cda1f40ae744" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="311d4633-0f88-80ba-b4c3-caff687d9016"/></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80a7-905b-ee44c5dd9fa5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="311d4633-0f88-80bb-baef-d7d13ea19d2b" class=""><div class="indented"><div style="display:contents" dir="auto"><p id="311d4633-0f88-807c-8eb7-f3fccb51add1" class="">
+</p></div></div></p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
