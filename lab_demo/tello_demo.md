@@ -10,7 +10,7 @@ layout: default
 
 **Objective**
 
-This lab demo demonstrates **vision-based closed-loop control** using a **DJI Tello drone**.
+Thisssssss lab demo demonstrates **vision-based closed-loop control** using a **DJI Tello drone**.
 
 The drone detects an **AprilTag (tag36h11 family)** and autonomously follows it:
 
