@@ -6,7 +6,7 @@ title: ""
 
 <br>
 
-<h1 align="center"> Drone Research Documentation</h1>
+<h1 align="center">Research Documentation</h1>
 <br>
 <br>
 
@@ -18,7 +18,7 @@ Documentation and Resources of my PhD work
 
 ---
 
-## Documentation of my work on Drones
+## Tello Drones
 
 ### 1. Tello Drone – AprilTag Tracking  
 Vision-based closed-loop control demonstration.  
@@ -27,6 +27,9 @@ Vision-based closed-loop control demonstration.
 ### 2. Tello Drone – System Details  
 Hardware, SDK, control interface, and communication pipeline.  
 🔗 [View Details](https://imsafwanp2.github.io/Tello%20drone/Tello_Drone)
+
+
+## Hardware experiment and Field robotics
 
 ### 3. Drone Prototyping  
 Custom builds, companion computers, integration workflow.  
