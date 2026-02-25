@@ -56,7 +56,7 @@ title: ""
 
 1. There is no shortcut to reading papers — more reading strengthens your story.
 2. Use tools as assistants, not substitutes.
-3. [Elicit](https://elicit.com/)** – useful for literature review.
+3. [Elicit](https://elicit.com/) – useful for literature review.
 4. GPT models can still hallucinate — verify everything.
 
 ---
@@ -101,3 +101,14 @@ My tutorial on using icograms:
 4. Write yourself first → polish with AI → don’t over-invest in the first draft.
 5. Don’t use both tables and plots for the same data.
 6. Check the relevance of every figure in the paper.
+
+
+---
+
+<br>
+
+**My video on writing a research paper** : https://www.youtube.com/watch?v=6X3Azpj9D1M
+
+**My slides on writing a research paper** : https://docs.google.com/presentation/d/1zTFDaTKiuyBp5Kg2Y2nPbLeZgQ8ikWcw_z4QbcxEycU/edit?usp=sharing
+
+---
