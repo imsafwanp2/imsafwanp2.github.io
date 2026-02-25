@@ -3,7 +3,9 @@ title: ""
 layout: default
 ---
 
-<h1 align="center">Tello drone AprilTag tracking</h1>
+![](tello_demo.png)
+
+<h1 align="center">Tello Drone AprilTag Tracking Demo</h1>
 <br>
 <br>
 
