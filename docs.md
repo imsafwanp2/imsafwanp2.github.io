@@ -22,7 +22,7 @@ Documentation and Resources of my PhD work
 
 ### 1. Tello Drone – AprilTag Tracking  
 Vision-based closed-loop control demonstration.  
-🔗 [View Project](https://imsafwanp2.github.io/lab_demo/tello_demo/)
+🔗 [View Details](https://imsafwanp2.github.io/lab_demo/tello_demo)
 
 ### 2. Tello Drone – System Details  
 Hardware, SDK, control interface, and communication pipeline.  
@@ -30,11 +30,11 @@ Hardware, SDK, control interface, and communication pipeline.
 
 ### 3. Drone Prototyping  
 Custom builds, companion computers, integration workflow.  
-🔗 [View Documentation](https://imsafwanp2.github.io/drone_prototyping/Drone%20prototyping)
+🔗 [View Details](https://imsafwanp2.github.io/drone_prototyping/Drone%20prototyping)
 
 ### 4. PX4 SITL Simulation  
 PX4 + Gazebo setup, simulation experiments, MAVSDK integration.  
-🔗 [View Simulation Docs](https://imsafwanp2.github.io/SITL_PX4/PX4-SITL)
+🔗 [View Details](https://imsafwanp2.github.io/SITL_PX4/PX4-SITL)
 
 
 
