@@ -13,7 +13,6 @@ layout: default
 
 
 
-#
 
 ## A. Drone building phase
 
@@ -145,7 +144,7 @@ Now both devices are in the same network.
 1. SSH Into the Onboard Computer from ground computer
 2. Now you are inside the Jetson terminal.
 
-        You can:
+You can:
 
 - Write Python code
 - Edit files

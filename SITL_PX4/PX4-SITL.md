@@ -8,13 +8,7 @@ layout: default
 
 <h1 align="center">PX4-SITL Instructions (Simulation)</h1>
 <br>
-<br>
 
-
-
-
-
----
 
 **Helpful Links:**
 
@@ -28,7 +22,7 @@ https://kuat-telegenov.notion.site/How-to-setup-PX4-SITL-with-ROS2-and-XRCE-DDS-
 
 It runs on flight controller hardware (like Pixhawk) or in simulation (SITL).
 
-### **1. Install PX4**
+**1. Install PX4**
 
 ```python
 cd
@@ -48,7 +42,7 @@ pip3 uninstall empy
 pip3 install --user empy==3.3.4
 ```
 
-### **2. Setup Micro XRCE-DDS Agent & Client**
+**2. Setup Micro XRCE-DDS Agent & Client**
 
 **Micro XRCE-DDS** is a lightweight communication system used to connect **resource-constrained devices** (like PX4 flight controllers) to the **ROS 2 DDS network**.
 
@@ -65,7 +59,7 @@ sudo make install
 sudo ldconfig /usr/local/lib/
 ```
 
-### **3. Install QGC:**
+**3. Install QGC:**
 
 **QGroundControl (QGC)** is a **ground control station (GCS)** application used to monitor and control drones running **PX4** (and also ArduPilot).
 
