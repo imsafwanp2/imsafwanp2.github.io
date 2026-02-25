@@ -4,6 +4,7 @@ layout: default
 ---
 
 ![](tello_demo.png)
+<br>
 
 <h1 align="center">Tello Drone AprilTag Tracking Demo</h1>
 <br>
