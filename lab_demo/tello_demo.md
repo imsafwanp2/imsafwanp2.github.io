@@ -3,10 +3,9 @@ title: ""
 layout: default
 ---
 
-# **Tello drone AprilTag tracking** 
-\
-\
-\
+<h1 align="center">Tello drone AprilTag tracking</h1>
+<br>
+<br>
 
 **Objective**
 
