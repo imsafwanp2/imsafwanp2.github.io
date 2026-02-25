@@ -20,7 +20,7 @@ layout: default
 
  https://docs.px4.io/main/en/ros2/user_guide.html
 
-‣ 
+https://kuat-telegenov.notion.site/How-to-setup-PX4-SITL-with-ROS2-and-XRCE-DDS-Gazebo-simulation-on-Ubuntu-22-e963004b701a4fb2a133245d96c4a247
 
 ---
 
