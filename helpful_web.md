@@ -12,9 +12,6 @@ title: ""
 
 
 
-
-## Helpful Websites
-
 1. **PDF Compression**  
    [PDF24 Compress PDF](https://tools.pdf24.org/en/compress-pdf#s=1772231253712)
 
