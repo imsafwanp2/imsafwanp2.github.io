@@ -41,6 +41,9 @@ PX4 + Gazebo setup, SITL simulation experiments, MAVSDK integration.  \
 🔗 [View Details](https://imsafwanp2.github.io/SITL_PX4/PX4-SITL)
 
 
+###  Helpful websites
+🔗 [View Details](https://imsafwanp2.github.io/helpful_web)
+
 ## PhD Reflection 
 
 
