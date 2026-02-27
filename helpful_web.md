@@ -13,14 +13,16 @@ title: ""
 
 
 
+## Helpful Websites
+
 1. **PDF Compression**  
-   https://tools.pdf24.org/en/compress-pdf#s=1772231253712  
+   [PDF24 Compress PDF](https://tools.pdf24.org/en/compress-pdf#s=1772231253712)
 
 2. **LaTeX Table Generation from Excel**  
-   https://www.tablesgenerator.com/  
+   [Tables Generator](https://www.tablesgenerator.com/)
 
 3. **Free QR Code Generation**  
-   https://www.canva.com/qr-code-generator/  
+   [Canva QR Code Generator](https://www.canva.com/qr-code-generator/)
 
 4. **Compare Differences Between Two Codes**  
-   https://www.diffchecker.com/
+   [Diffchecker](https://www.diffchecker.com/)
