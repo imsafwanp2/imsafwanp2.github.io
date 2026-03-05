@@ -41,6 +41,11 @@ PX4 + Gazebo setup, SITL simulation experiments, MAVSDK integration.  \
 🔗 [View Details](https://imsafwanp2.github.io/SITL_PX4/PX4-SITL)
 
 
+### 5. Claerapth Husky
+Instructions about the Claerapath Husky robot \
+🔗 [View Details](https://imsafwanp2.github.io/Husky_instructions)
+
+
 ###  Helpful websites
 🔗 [View Details](https://imsafwanp2.github.io/helpful_web)
 
