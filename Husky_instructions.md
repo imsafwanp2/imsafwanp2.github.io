@@ -8,6 +8,15 @@ title: ""
 <h1 align="center">Clearpath Husky Setup Notes</h1>
 <br>
 
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <div style="text-align: center;">
+    <img src="husky_in_snow_gif.gif" style="width: 100%; min-width: 250px;">
+    <p><em></em></p>
+  </div>
+
+  
+</div>
+
 
 ## Reference Manual
 Clearpath Husky Manual provided by Clearpath:  
