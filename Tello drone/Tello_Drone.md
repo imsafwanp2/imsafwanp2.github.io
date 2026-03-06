@@ -5,7 +5,6 @@ layout: default
 
 
 <br>
-
 <h1 align="center"> Tello Drone</h1>
 <br>
 

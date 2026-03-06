@@ -5,7 +5,7 @@ title: ""
 
 
 <br>
-<h1 align="center">Clearpath Husky Setup Notes</h1>
+<h1 align="center">Clearpath Husky</h1>
 <br>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
@@ -13,16 +13,20 @@ title: ""
     <img src="husky_in_snow_gif.gif" style="width: 100%; min-width: 250px;">
     <p><em></em></p>
   </div>
-
-  
 </div>
 
+
+<br>
+<h1 align="center">Clearpath Husky Setup Notes</h1>
+<br>
+
+---
 
 ## Reference Manual
 Clearpath Husky Manual provided by Clearpath:  
 <https://uofi.box.com/s/fs2cpd2apfchoqz74t4s30reo3n4084b>
 
----
+<br>
 
 ## Robot Hardware Overview
 
@@ -34,7 +38,7 @@ The Clearpath Husky robot comes with **two onboard computers**:
 Both computers are **pre-configured with ROS2 Humble** and common robotics packages.  
 The operating system installed on both machines is **Ubuntu 22.04**.
 
----
+<br>
 
 ## 1. Setting Up the Remote Computer
 
@@ -49,7 +53,7 @@ The steps followed are similar to those described in:
 Note:  
 These instructions were originally written for **ROS2 Humble**. Clearpath has now updated their documentation for **ROS2 Jazzy**, but the steps remain mostly the same.
 
----
+<br>
 
 ## 2. Running Simulation
 
@@ -71,7 +75,8 @@ You can test several functionalities in simulation:
 
 More tutorials and examples are available on the Clearpath documentation website.
 
----
+<br>
+
 
 ## 3. Communication Setup
 
@@ -110,14 +115,13 @@ ros2 launch ...
 ```
 This ensures that programs continue running in the background even if the SSH connection drops.
 
----
 
-
+<br>
 <br>
 <h1 align="center">My Work and Applications with Husky</h1>
 <br>
 
-
+---
 
 ### Work 1: Localization with SLAM and navigation with Nav2
 
@@ -166,8 +170,8 @@ After fixing this issue, the SLAM and Nav2 packages work very well indoors. SLAM
 To address this, I adopted an alternative approach using GPS-based localization along with Nav2 for navigation. My detailed approach is described below.
 
 
-</br>
-</br>
+<br>
+<br>
 
 ### Work 2: GPS-Based Localization
 
@@ -186,6 +190,6 @@ Make sure that both the default EKF and the dual EKF are **not running simultane
 
 - Finally, with this localization pipeline running correctly, Nav2-based navigation can be executed.
 
-</br>
+<br>
 
 **A good guide to for this setup:** [https://docs.nav2.org/tutorials/docs/navigation2_with_gps.html](https://docs.nav2.org/tutorials/docs/navigation2_with_gps.html)
