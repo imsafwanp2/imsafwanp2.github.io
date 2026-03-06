@@ -43,9 +43,20 @@ Instructions about the Clearpath Husky robot \
 Tello drone programming  with python. \
 🔗 [View Details](https://imsafwanp2.github.io/Tello%20drone/Tello_Drone)
 
+
 ### Tello Drone – AprilTag Tracking  
 Vision-based AprilTag tracking with Tello drone. \
 🔗 [View Details](https://imsafwanp2.github.io/lab_demo/tello_demo)
+
+---
+<br>
+
+## Motion Capture System
+
+### Otitrack Mocap – System Details  
+Brief Guide for using the lab mocap system and Motive software \
+🔗 [View Details](https://imsafwanp2.github.io/mocap/mocap_doc)
+
 
 
 ---
