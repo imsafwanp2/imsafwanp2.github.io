@@ -33,8 +33,10 @@ PX4 + Gazebo setup, SITL simulation experiments, MAVSDK integration.  \
 Instructions about the Clearpath Husky robot \
 🔗 [View Details](https://imsafwanp2.github.io/Husky_instructions)
 
+<br>
 
 ---
+
 <br>
 
 ## Tello Drone
@@ -48,7 +50,10 @@ Tello drone programming  with python. \
 Vision-based AprilTag tracking with Tello drone. \
 🔗 [View Details](https://imsafwanp2.github.io/lab_demo/tello_demo)
 
+<br>
+
 ---
+
 <br>
 
 ## Motion Capture System
@@ -59,7 +64,10 @@ Brief Guide for using the lab mocap system and Motive software \
 
 
 
+<br>
+
 ---
+
 <br>
 
 
@@ -68,7 +76,10 @@ List of helpful websites. \
 🔗 [View Details](https://imsafwanp2.github.io/helpful_web)
 
 
+<br>
+
 ---
+
 <br>
 
 ## PhD Reflection 
