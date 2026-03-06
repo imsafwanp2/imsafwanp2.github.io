@@ -20,7 +20,7 @@ title: ""
 
 ## Reference Manual
 Clearpath Husky Manual provided by Clearpath:  
-https://uofi.box.com/s/fs2cpd2apfchoqz74t4s30reo3n4084b
+<https://uofi.box.com/s/fs2cpd2apfchoqz74t4s30reo3n4084b>
 
 ---
 
@@ -44,7 +44,7 @@ The steps followed are similar to those described in:
 
 - **Manual:** Page 8, Section 12  
 - **Clearpath Documentation:**  
-  https://docs.clearpathrobotics.com/docs/ros/installation/offboard_pc
+  <https://docs.clearpathrobotics.com/docs/ros/installation/offboard_pc>
 
 Note:  
 These instructions were originally written for **ROS2 Humble**. Clearpath has now updated their documentation for **ROS2 Jazzy**, but the steps remain mostly the same.
@@ -56,12 +56,12 @@ These instructions were originally written for **ROS2 Humble**. Clearpath has no
 The Husky robot can be simulated in a **Gazebo environment** to perform experiments and testing.
 
 Simulation instructions are provided here:  
-https://docs.clearpathrobotics.com/docs/ros/tutorials/simulator/overview
+<https://docs.clearpathrobotics.com/docs/ros/tutorials/simulator/overview>
 
 You can test several functionalities in simulation:
 
 ### SLAM and Map Building
-https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/slam
+<https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/slam>
 
 ### Localization
 <https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/localization>
@@ -121,9 +121,9 @@ This ensures that programs continue running in the background even if the SSH co
 
 ### Work 1: Localization with SLAM and navigation with Nav2
 
-As th information provided in the Tutorials in the Clearpath website, we use uilize those packages for running the SLAM and Nav2. You can run it on both remote computer or Husky onboard computer (primary computer is preffered)
+As per the information provided in the tutorials on the Clearpath website, we utilize those packages to run SLAM and Nav2. These can be executed either on a remote computer or on the Husky onboard computer (the primary computer is preferred).
 
-The SLAM and Nav2 packages work fine until we faced the issue of `queue is full`. Below is my detailed take on this. 
+The SLAM and Nav2 packages work well until we encounter the issue `queue is full`. Below is my detailed explanation of this issue.
 
 ### Issue 1: Data Drop, Queue Full, and Transform Data Too Old
 
@@ -161,8 +161,9 @@ Changes made:
    
 
 
+After fixing this issue, the SLAM and Nav2 packages work very well indoors. SLAM can be used for both localization and map building. However, issues arise in outdoor environments because the lack of distinct features leads to inaccurate localization. 
 
-After fixing this issue, SLAM and Nav2 packages work very fine in inddor. You can use slam for localization and Map building. But issue arises in outdoor, due to less features the localization is errorneous. I took alternate approach of GPS based localization and the Nav2 for navigation. My detailed take is below.
+To address this, I adopted an alternative approach using GPS-based localization along with Nav2 for navigation. My detailed approach is described below.
 
 
 </br>
