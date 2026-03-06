@@ -29,6 +29,8 @@ Vision-based AprilTag tracking with Tello drone. \
 🔗 [View Details](https://imsafwanp2.github.io/lab_demo/tello_demo)
 
 
+---
+
 
 ## Hardware Experiment and Field Robotics
 
@@ -46,8 +48,13 @@ Instructions about the Clearpath Husky robot \
 🔗 [View Details](https://imsafwanp2.github.io/Husky_instructions)
 
 
+---
+
 ###  Helpful websites
 🔗 [View Details](https://imsafwanp2.github.io/helpful_web)
+
+
+---
 
 ## PhD Reflection 
 

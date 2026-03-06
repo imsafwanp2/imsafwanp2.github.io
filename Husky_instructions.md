@@ -55,10 +55,10 @@ You can test several functionalities in simulation:
 https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/slam
 
 ### Localization
-https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/localization
+<https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/localization>
 
 ### Navigation
-https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/actions
+<https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/actions>
 
 More tutorials and examples are available on the Clearpath documentation website.
 
@@ -79,7 +79,7 @@ Detailed instructions are available in:
 
 - **Manual:** Section 14–15 (Pages 10–11)
 - **Documentation:**  
-https://docs.clearpathrobotics.com/docs/ros/networking/overview
+[https://docs.clearpathrobotics.com/docs/ros/networking/overview](https://docs.clearpathrobotics.com/docs/ros/networking/overview)
 
 
 ### SSH Access 
@@ -108,6 +108,14 @@ This ensures that programs continue running in the background even if the SSH co
 <h1 align="center">My Work and Applications with Husky</h1>
 <br>
 
+
+
+### Work 1: Localization with SLAM and navigation with Nav2
+
+As th information provided in the Tutorials in the Clearpath website, we use uilize those packages for running the SLAM and Nav2. You can run it on both remote computer or Husky onboard computer (primary computer is preffered)
+
+The SLAM and Nav2 packages work fine until we faced the issue of `queue is full`. Below is my detailed take on this. 
+
 ### Issue 1: Data Drop, Queue Full, and Transform Data Too Old
 
 **Issue Summary:** \
@@ -119,7 +127,7 @@ While running SLAM and navigation, the following errors appeared:
 These errors typically occur when sensor messages are arriving faster than they are processed, or when the transform data between frames becomes outdated.
 
 
-**Solutions I Found** \
+**Solutions I Found:**
 
 **Option 1 — Run everything on the primary computer**
 
@@ -145,4 +153,29 @@ Changes made:
 
 
 
+After fixing this issue, SLAM and Nav2 packages work very fine in inddor. You can use slam for localization and Map building. But issue arises in outdoor, due to less features the localization is errorneous. I took alternate approach of GPS based localization and the Nav2 for navigation. My detailed take is below.
 
+
+</br>
+</br>
+
+### Work 2: GPS-Based Localization
+
+I used the ROS2 `robot_localization` package ([link](https://docs.ros.org/en/noetic/api/robot_localization/html/index.html)) to localize the robot in an outdoor environment. Briefly, this package uses an Extended Kalman Filter (EKF) to fuse local odometry data (wheel odometry and IMU) with GPS measurements for outdoor localization. A similar concept is used indoors when performing SLAM, where multiple sensor sources are fused to estimate the robot’s pose.
+
+By default, the robot starts with an EKF-based localization system, but GPS is not integrated into this default configuration.
+
+- First, I stopped the Clearpath default EKF localization.
+
+- Second, I installed the `robot_localization` package from source and modified the configuration. I implemented a **dual EKF setup** to improve outdoor localization performance.
+
+Make sure that both the default EKF and the dual EKF are **not running simultaneously**. As mentioned earlier, the default EKF must be stopped before starting the dual EKF.
+
+- Third, once the dual EKF is running, the **TF tree becomes complete**, forming the standard transform chain: `map → odom → base_link`
+
+
+- Finally, with this localization pipeline running correctly, Nav2-based navigation can be executed.
+
+</br>
+
+**A good guide to for this setup:** [https://docs.nav2.org/tutorials/docs/navigation2_with_gps.html](https://docs.nav2.org/tutorials/docs/navigation2_with_gps.html)
