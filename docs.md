@@ -53,7 +53,7 @@ Vision-based AprilTag tracking with Tello drone. \
 
 ## Motion Capture System
 
-### Otitrack Mocap – System Details  
+### Optitrack Mocap – System Details  
 Brief Guide for using the lab mocap system and Motive software \
 🔗 [View Details](https://imsafwanp2.github.io/mocap/mocap_doc)
 
