@@ -179,7 +179,7 @@ I used the ROS2 `robot_localization` package ([link](https://docs.ros.org/en/noe
 
 By default, the robot starts with an EKF-based localization system, but GPS is not integrated into this default configuration.
 
-- First, I stopped the Clearpath default EKF localization.
+- First, I stopped the Clearpath default EKF localization. we can do this by commenting out `enable_ekf ` inside `/opt/ros/humble/share/clearpath_common/launch/platform.launch.py` and `/opt/ros/humble/share/clearpath_control/launch/localization.launch.py` scripts. 
 
 - Second, I installed the `robot_localization` package from source and modified the configuration. I implemented a **dual EKF setup** to improve outdoor localization performance.
 
